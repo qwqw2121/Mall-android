@@ -1,0 +1,3 @@
+include ':app', ':action', ':base', ':base', ':instantapp', ':test'
+include ':easypay'
+include ':alipay'

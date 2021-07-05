@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="5dp">
+    <ImageView
+        android:id="@+id/icon_url"
+        android:layout_width="100dp"
+        android:layout_height="80dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/icon_url"
+        android:paddingLeft="10dp">
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="name"
+            android:textSize="@dimen/big_fond"/>
+        <TextView
+            android:id="@+id/price"
+            android:text="price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            android:textColor="@color/colorRed"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/num"
+            android:text="X1"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:gravity="right"
+            android:textColor="@color/colorRed"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+</RelativeLayout>
