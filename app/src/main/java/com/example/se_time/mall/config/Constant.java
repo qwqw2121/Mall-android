@@ -5,9 +5,12 @@ public class Constant {
     public static class API{
         //测试地址
         //public static final String BASE_URL="http://39.97.173.123:8080//actionmall/";
-       // public static final String BASE_URL2="http://118.190.37.204:8080/mall";
+            //本机测试地址
+     // public static final String BASE_URL="http://10.21.144.51:8888/mall/";
+            //后台
         public static final String BASE_URL="http://192.168.43.72:8888/mall/";
-//        public static final String BASE_URL2="http://10.0.2.2:8080/mall";
+
+         //  public static final String BASE_URL2="http://10.0.2.2:8080/mall";
         //产品类型参数
         public static final String CATEGOTYRY_PARAM_URL=BASE_URL+"param/findallparams.do";
         //热销商品

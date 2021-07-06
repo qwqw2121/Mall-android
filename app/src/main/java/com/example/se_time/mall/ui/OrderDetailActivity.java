@@ -131,30 +131,32 @@ public  class OrderDetailActivity extends AppCompatActivity {
         orderNo.setText("订单编号:"+order.getOrderNo());
         created.setText("订单时间:"+order.getCreated());
 
-       type.setText("支付类型:"+order.getType());
+   //    type.setText("支付类型:"+order.getType());
         total.setText("合计："+order.getAmount());
 
         //status.setText("订单状态:"+order.getStatus());
+        switch (order.getType()) {
 
+            case 1:
+                type.setText("支付类型: 支付宝支付");
+                break;
+            case 2:
+                type.setText("支付类型: 微信支付");
+                break;
+            case 3:
+                type.setText("支付类型: 银联支付");
+                break;
+        }
         switch (order.getStatus())
         {
             case 1:
-                status.setText("订单状态:未付款");
+                status.setText("订单状态:支付失败");
                 break;
             case 2:
-                status.setText("订单状态:已付款");
+                status.setText("订单状态:支付成功");
                 break;
             case 3:
-                status.setText("订单状态:已发货");
-                break;
-            case 4:
-               status.setText("订单状态:交易成功");
-                break;
-            case 5:
-                status.setText("订单状态:交易关闭");
-                break;
-            case 6:
-                status.setText("订单状态:已取消");
+                status.setText("订单状态:支付取消");
                 break;
         }
 

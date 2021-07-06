@@ -156,10 +156,7 @@ public class DetailActivity
                             SverResponse result=JSONUtils.fromJson(response,SverResponse.class);
                             if(result.getStatus()==ResponseCode.SUCCESS.getCode())
                             {
-                                Intent intent=new Intent(DetailActivity.this, CartFragment.class);
-
-                                startActivity(intent);
-                                Toast.makeText(DetailActivity.this,result.getMsg(),Toast.LENGTH_SHORT).show();
+                                Toast.makeText(DetailActivity.this,"商品已加入购物车请返回购买",Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 Toast.makeText(DetailActivity.this,"失败",Toast.LENGTH_SHORT).show();

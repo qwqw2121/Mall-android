@@ -250,6 +250,7 @@ public class ConfirmOrderActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
         if(requestCode==REQ_ADDR_CODE)
         {
             if(resultCode==RESULT_OK)
@@ -259,15 +260,15 @@ public class ConfirmOrderActivity extends AppCompatActivity {
             }
         }
         if(requestCode==1){
-            if(resultCode==2)
+            if(resultCode==1)
             {
-                order.setType("支付成功");
-            }else {
-                order.setType("支付失败");
+                int status;
+                status=(int)data.getSerializableExtra("status");
+                order.setStatus(status);
+                order.setType(status);
+
             }
-
         }
-
     }
 }
 

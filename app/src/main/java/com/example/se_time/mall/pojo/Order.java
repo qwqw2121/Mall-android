@@ -7,7 +7,7 @@ public class Order {
 
     private String orderNo;
     private BigDecimal amount;
-    private String type;
+    private Integer type;
     private String typeDesc;
     private Integer freight;
     private Integer status;
@@ -54,11 +54,11 @@ public class Order {
         this.amount = amount;
     }
 
-    public String getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
